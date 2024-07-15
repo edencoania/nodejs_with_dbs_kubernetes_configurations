@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo-service
+spec:
+  selector:
+    app: mongo # Match labels with your Node.js Deployment
+  ports:
+  - protocol: TCP
+    port: 27017 # Port exposed by the service
+    targetPort: 27017 # Port your Node.js app listens on inside the container
+    nodePort: 32500 # Explicitly assign NodePort 31000 for external access
+  type: NodePort # Change to NodePort or LoadBalancer if needed

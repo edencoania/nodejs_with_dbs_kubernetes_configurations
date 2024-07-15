@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs
+  template:
+    metadata:
+      labels:
+        app: nodejs
+    spec:
+      containers:
+      - name: nodejs-container
+        image: edencoania/release:nigth
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
+        env:
+        - name: "MYSQL_HOST"
+          value: "mysql-service"
+        - name: "MONGODB_URI"
+          value: "mongodb://root:example@mongo-service"
+        envFrom:
+        - secretRef:
+            name: my-sql-credentials # Reference the secret name

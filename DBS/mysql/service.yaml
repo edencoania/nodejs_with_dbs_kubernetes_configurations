@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-service
+spec:
+  selector:
+    app: sql-app # Match labels with your Node.js Deployment
+  ports:
+  - protocol: TCP
+    port: 3306 # Port exposed by the service
+    targetPort: 3306 # Port your Node.js app listens on inside the container
+    nodePort: 32000 # Explicitly assign NodePort 31000 for external access
+  type: NodePort # Change to NodePort or LoadBalancer if needed
