@@ -68,18 +68,19 @@ Before starting, ensure you have set up the local Persistent Volumes (PVs).
 The Node.js application communicates with MySQL and MongoDB using environment variables defined in the deployment files. These services are accessed within the Kubernetes cluster.
 
 ## Getting Started 🚀
+1. **make sure you have minikube working properly**
 
-1. **Set up local PVs**:
+2. **Set up local PVs**:
    Ensure that your local persistent volumes are configured correctly.
     ```sh
     minikube ssh
-    mkdir /data/kubernetes/mongo
+    mkdir /data/kubernetes/mongodb
     mkdir /data/kubernetes/mysql
-    chown 777 /data/kubernetes/mongo
+    chown 777 /data/kubernetes/mongodb
     chown 777 /data/kubernetes/mysql
     ```
 
-2. **Apply Configurations**:
+3. **Apply Configurations**:
    Run the following script to apply all the Kubernetes configurations:
    ```sh
    ./apply_all.sh
