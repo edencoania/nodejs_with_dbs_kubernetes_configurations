@@ -6,28 +6,28 @@ Welcome to the **Node.js and Databases on Kubernetes** project! This project dem
 
 Here's an overview of the project structure:
 
-├── apply_all.sh
-├── DBS
-│ ├── mongo
-│ │ ├── deployment.yaml
-│ │ ├── pvc.yaml
-│ │ ├── pv.yaml
-│ │ └── service.yaml
-│ └── mysql
-│ ├── deployment.yaml
-│ ├── pvc.yaml
-│ ├── pv.yaml
-│ ├── secret.yaml
-│ └── service.yaml
-├── ingress.yaml
-├── kube-admin-pod
-│ └── deployment.yaml
-├── kubectl
-├── kubectl.sha256
-├── node-kube
-│ ├── deployment.yaml
-│ └── service.yaml
-└── readme.md
+├── apply_all.sh     
+├── DBS     
+│ ├── mongo     
+│ │ ├── deployment.yaml     
+│ │ ├── pvc.yaml        
+│ │ ├── pv.yaml     
+│ │ └── service.yaml        
+│ └── mysql     
+│ ├── deployment.yaml       
+│ ├── pvc.yaml      
+│ ├── pv.yaml       
+│ ├── secret.yaml       
+│ └── service.yaml      
+├── ingress.yaml        
+├── kube-admin-pod      
+│ └── deployment.yaml       
+├── kubectl     
+├── kubectl.sha256      
+├── node-kube       
+│ ├── deployment.yaml       
+│ └── service.yaml      
+└── readme.md       
 
 ## Components 🛠️
 
